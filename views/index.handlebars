@@ -1,5 +1,4 @@
 <h2>Eat Da Burger</h2>
-<img src="./../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
 <div class="container">
     <div class="row text-center align-items-center">
         <div class="col-sm align-middle">
@@ -7,16 +6,15 @@
                 {{#each burger}}
                     {{#unless devoured}}
                         {{>burgers/burger-block devoured=true}}
-                        {{!-- <h6>{{this.burger_name}}
-                            <form class="devour-form button-size">
-                                <input type="hidden" class="burger_id" type="text" value = {{this.id}}>
-                                <div class="text-right"><button type="submit" class="btn btn-secondary" id="eatIt">Devour!</button></div>
-                            </form>
-                        </h6> --}}
                     {{/unless}}
                 {{/each}}
             </ul>
         </div>
+
+        <div class="col-sm align-middle">
+            <img src="../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
+        </div>
+
         <div class="col-sm align-middle">
             <ul>
                 {{#each burger}}
