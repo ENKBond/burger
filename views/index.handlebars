@@ -1,35 +1,39 @@
-<img src="./public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
 <h2>Eat Da Burger</h2>
+<img src="./../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
 <div class="container">
-    <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3 notDevoured">
+    <div class="row text-center align-items-center">
+        <div class="col-sm align-middle">
             <ul>
-                {{#each burgers}}
+                {{#each burger}}
                     {{#unless devoured}}
-                        {{> burgers/burger-block devour=true}}
+                        {{>burgers/burger-block devoured=true}}
+                        {{!-- <h6>{{this.burger_name}}
+                            <form class="devour-form button-size">
+                                <input type="hidden" class="burger_id" type="text" value = {{this.id}}>
+                                <div class="text-right"><button type="submit" class="btn btn-secondary" id="eatIt">Devour!</button></div>
+                            </form>
+                        </h6> --}}
                     {{/unless}}
                 {{/each}}
             </ul>
         </div>
-        <div class="col-sm-3 devoured">
+        <div class="col-sm align-middle">
             <ul>
-                {{#each burgers}}
+                {{#each burger}}
                     {{#if devoured}}
-                        {{> burgers/burger-block devour=false}}
+                        {{>burgers/burger-block devoured=false}}
                     {{/if}}
                 {{/each}}
             </ul>
         </div>
-        <div class="col-sm-3"></div>
     </div>
 </div>
 
 <form>
     <div class="form-group">
         <label for="addBurger">Add A New Burger</label>
-        <textarea class="form-control" id="addBurger" rows="2"></textarea>
+        <input type="text" id="addBurger" name="burger_name">
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" id="submit">Submit</button>
 </form>
 
