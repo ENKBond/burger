@@ -2,24 +2,24 @@
 <div class="container">
     <div class="row text-center align-items-center">
         <div class="col-sm align-middle">
-            <ul>
-                {{#each burger}}
+            <ul style="list-style-type:none;">
+                {{#each burgers}}
                     {{#unless devoured}}
-                        {{>burgers/burger-block devoured=true}}
+                        {{>burgers/burger-block devoured=false}}
                     {{/unless}}
                 {{/each}}
             </ul>
         </div>
 
         <div class="col-sm align-middle">
-            <img src="../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
+            <img src="../../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
         </div>
 
         <div class="col-sm align-middle">
-            <ul>
-                {{#each burger}}
+            <ul style="list-style-type:none;">
+                {{#each burgers}}
                     {{#if devoured}}
-                        {{>burgers/burger-block devoured=false}}
+                        {{>burgers/burger-block devoured=true}}
                     {{/if}}
                 {{/each}}
             </ul>
@@ -27,11 +27,13 @@
     </div>
 </div>
 
-<form>
-    <div class="form-group">
-        <label for="addBurger">Add A New Burger</label>
-        <input type="text" id="addBurger" name="burger_name">
-    </div>
-    <button type="submit" class="btn btn-success" id="submit">Submit</button>
-</form>
+<h2>Add a Burger!</h2>
+<form class="create-form">
 
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="burger_name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
