@@ -2,7 +2,7 @@
 
 The app allows uers to create burgers and eat them using the "add a burger" and "eat it" functions. Adding a burger will add it to the left side list and will insert a row into the database. Selecting the "eat it" button will move the burger to the right side list and will update the burger in the database. 
 
-##Technologies Used
+## Technologies Used
 * Node
 * Express Handlebars
 * Homegrown ORM
@@ -12,7 +12,7 @@ The app allows uers to create burgers and eat them using the "add a burger" and 
 * HTML
 * CSS
 
-##Using the App
+## Using the App
 To use the app, please complete the following steps:
 * Clone from GitHub
 * Install the npm packages using "npm install"
