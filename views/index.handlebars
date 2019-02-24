@@ -1,13 +1,17 @@
-<h2>Eat Da Burger</h2>
+<div class="titles">
+<h1>Eat Da Burger!</h1>
+</div>
+<br>
 <div class="container">
     <div class="row text-center align-items-center">
         <div class="col-sm align-middle">
+            <h3>Available Burgers</h3>
             <ul style="list-style-type:none;">
                 {{#each burgers}}
                     {{#unless devoured}}
                         <li>
                             {{burger_name}}
-                            <button class="devour-burger" data-id="{{id}}" data-newdevour ="{{devour}}">DEVOUR!</button>
+                            <button class="devour-burger" data-id="{{id}}" data-newdevour ="{{devour}}">EAT IT!</button>
                         </li>
                     {{/unless}}
                 {{/each}}
@@ -15,10 +19,11 @@
         </div>
 
         <div class="col-sm align-middle">
-            <img src="../../public/assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
+            <img src="./assets/img/funny-fruit-clipart-101714.png" alt = "burger image">
         </div>
 
         <div class="col-sm align-middle">
+            <h3>Eaten Burgers</h3>
             <ul style="list-style-type:none;">
                 {{#each burgers}}
                     {{#if devoured}}
@@ -32,8 +37,10 @@
     </div>
 </div>
 
-<h2>Add a Burger!</h2>
-<form class="create-form">
+<div class="titles">
+<h2>Add a Burger</h2>
+</div>
+<form class="create-form form-group">
 
   <div class="form-group">
     <label for="burger">Burger Name:</label>
